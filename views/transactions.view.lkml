@@ -122,4 +122,9 @@ view: transactions {
     type: count
     drill_fields: [customername, contactname]
   }
+  measure: total_sales {
+    description: "Total Sales by Territory, Rep and Customer"
+    type: sum
+    sql: ${sales} ;;
+  }
 }
